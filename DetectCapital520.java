@@ -1,40 +1,46 @@
 public class DetectCapital520 {
     public static void main(String[] args) {
-        String word="Google";
-        if((isStringUpperCase(word))||isStringLowerCase(word)||Character.isUpperCase(word.charAt(0))&&isStringLowerCase(word.substring(1)))
+        String word="Gogle";
+        // if((isStringUpperCase(word))||isStringLowerCase(word)||Character.isUpperCase(word.charAt(0))&&isStringLowerCase(word.substring(1)))
+        // {
+        //     System.out.println(true);
+        // }
+        // else
+        // System.out.println(false);
+        if(word.toUpperCase().equals(word)||word.toLowerCase().equals(word)||Character.isUpperCase(word.charAt(0)) && word.substring(1).toLowerCase().equals(word.substring(1)))
         {
             System.out.println(true);
         }
-        else
+        else 
         System.out.println(false);
     }
-    private static boolean isStringUpperCase(String str){
+    // private static boolean isStringUpperCase(String str){
         
-        //convert String to char array
-        char[] charArray = str.toCharArray();
+    //     //convert String to char array
+    //     char[] charArray = str.toCharArray();
         
-        for(int i=0; i < charArray.length; i++){
+    //     for(int i=0; i < charArray.length; i++){
             
-            //if any character is not in upper case, return false
-            if( !Character.isUpperCase( charArray[i] ))
-                return false;
-        }
+    //         //if any character is not in upper case, return false
+    //         if( !Character.isUpperCase( charArray[i] ))
+    //             return false;
+    //     }
         
-        return true;
-    }
+    //     return true;
+    // }
     
-    private static boolean isStringLowerCase(String str){
+    // private static boolean isStringLowerCase(String str){
         
-        //convert String to char array
-        char[] charArray = str.toCharArray();
+    //     //convert String to char array
+    //     char[] charArray = str.toCharArray();
         
-        for(int i=0; i < charArray.length; i++){
+    //     for(int i=0; i < charArray.length; i++){
             
-            //if any character is not in upper case, return false
-            if( !Character.isLowerCase( charArray[i] ))
-                return false;
-        }
+    //         //if any character is not in upper case, return false
+    //         if( !Character.isLowerCase( charArray[i] ))
+    //             return false;
+    //     }
         
-        return true;
-    }
+    //     return true;
+    // }
 }
